@@ -120,6 +120,12 @@ const cvFormatter = (arr) => {
         return false;
       });
       return results;
+  
+    for( let property in arr ) {
+        if((arr[property].firstName == null || arr[property].lastName == null) && arr[property].yearsOfExperience > 1)
+    
+        console.log( arr[property].firstName + arr[property].lastName+ arr[property].tech);
+        }
 
 };
 
@@ -184,6 +190,9 @@ const applicationsStatics = (arr) => {
     return allCV;
 
 };
+
+
+
 
 // // 4) ---------------------
 // //
