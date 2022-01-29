@@ -1,7 +1,5 @@
 const {
-    customerAndAge//,
-    // getEntries,
-    // courses,
+    customerAndAge,getEntries//,courses//,
     // getInfo,
     // getStudents,
 } = require("./Challenge08");
@@ -19,19 +17,19 @@ describe("Challenge08-01", () => {
     });
 });
 
-// describe("Challenge08-02", () => {
-//     test("Get-recipe-key", () => {
-//         let recipeInfo = {
-//             name: "pizza",
-//             ingredients: ["bread", "tomato", "chicken", "mayo"],
-//             cookTime: "twoHours",
-//             price: "25$",
-//         };
-//         expect(getEntries(recipeInfo)).toStrictEqual(
-//             ["name: pizza", "ingredients: bread,tomato,chicken,mayo", "cookTime: twoHours", "price: 25$"]
-//         );
-//     });
-// });
+describe("Challenge08-02", () => {
+    test("Get-recipe-key", () => {
+        let recipeInfo = {
+            name: "pizza",
+            ingredients: ["bread", "tomato", "chicken", "mayo"],
+            cookTime: "twoHours",
+            price: "25$",
+        };
+        expect(getEntries(recipeInfo)).toStrictEqual(
+            ["name: pizza", "ingredients: bread,tomato,chicken,mayo", "cookTime: twoHours", "price: 25$"]
+        );
+    });
+});
 
 // describe("Challenge08-03", () => {
 //     test("Get-Course-Name", () => {
