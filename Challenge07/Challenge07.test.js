@@ -1,70 +1,70 @@
 'use strict';
 
-const { objLat /*,cvFormatter, applicationsStatics, classesAvg*/ } = require('./Challenge07');
+const { objLat ,cvFormatter/*, applicationsStatics, classesAvg*/ } = require('./Challenge07');
 
-// const first_Cv_Sample = [{
-//         firstName: "Jason",
-//         lastName: "James",
-//         yearsOfExperience: 20,
-//         tech: "JS"
-//     },
-//     {
-//         firstName: "Aaron",
-//         lastName: "William",
-//         yearsOfExperience: 2,
-//         tech: "JS"
-//     },
-//     {
-//         firstName: "Shira",
-//         lastName: null,
-//         yearsOfExperience: 5,
-//         tech: ".Net"
-//     },
-//     {
-//         firstName: "Dimitri",
-//         lastName: "Akkerman",
-//         yearsOfExperience: 1,
-//         tech: "Python"
-//     },
-//     {
-//         firstName: "Isabella",
-//         lastName: null,
-//         yearsOfExperience: 7,
-//         tech: "Java"
-//     }
-// ]
+const first_Cv_Sample = [{
+        firstName: "Jason",
+        lastName: "James",
+        yearsOfExperience: 20,
+        tech: "JS"
+    },
+    {
+        firstName: "Aaron",
+        lastName: "William",
+        yearsOfExperience: 2,
+        tech: "JS"
+    },
+    {
+        firstName: "Shira",
+        lastName: null,
+        yearsOfExperience: 5,
+        tech: ".Net"
+    },
+    {
+        firstName: "Dimitri",
+        lastName: "Akkerman",
+        yearsOfExperience: 1,
+        tech: "Python"
+    },
+    {
+        firstName: "Isabella",
+        lastName: null,
+        yearsOfExperience: 7,
+        tech: "Java"
+    }
+]
 
-// const second_Cv_Sample = [{
-//         firstName: "Adele",
-//         lastName: "Douglas",
-//         yearsOfExperience: 7,
-//         tech: ".Net"
-//     },
-//     {
-//         firstName: "Jack",
-//         lastName: "Tyler",
-//         yearsOfExperience: 17,
-//         tech: "Java"
-//     },
-//     {
-//         firstName: null,
-//         lastName: "Henry",
-//         yearsOfExperience: 0,
-//         tech: "JS"
-//     },
-//     {
-//         firstName: "Jose",
-//         lastName: "Adam",
-//         yearsOfExperience: 5,
-//         tech: ".Net"
-//     },
-//     {
-//         firstName: "Victoria",
-//         lastName: "Zachary",
-//         yearsOfExperience: 10,
-//         tech: "Python"
-//     }
-// ]
+const second_Cv_Sample = [{
+        firstName: "Adele",
+        lastName: "Douglas",
+        yearsOfExperience: 7,
+        tech: ".Net"
+    },
+    {
+        firstName: "Jack",
+        lastName: "Tyler",
+        yearsOfExperience: 17,
+        tech: "Java"
+    },
+    {
+        firstName: null,
+        lastName: "Henry",
+        yearsOfExperience: 0,
+        tech: "JS"
+    },
+    {
+        firstName: "Jose",
+        lastName: "Adam",
+        yearsOfExperience: 5,
+        tech: ".Net"
+    },
+    {
+        firstName: "Victoria",
+        lastName: "Zachary",
+        yearsOfExperience: 10,
+        tech: "Python"
+    }
+]
 
 // const data = {
 //     SchoolName: "Al Farouk",
@@ -198,49 +198,49 @@ describe('Challenge07', () => {
 
 })
 
-// describe('Challenge07', () => {
-//     test('CV-Formatter', () => {
-//         let received = [{
-//                 fullName: "Jason James",
-//                 tech: "JS"
-//             },
-//             {
-//                 fullName: "Aaron William",
-//                 tech: "JS"
-//             },
-//             {
-//                 fullName: "Shira",
-//                 tech: ".Net"
-//             },
-//             {
-//                 fullName: "Isabella",
-//                 tech: "Java"
-//             }
-//         ]
+describe('Challenge07', () => {
+    test('CV-Formatter', () => {
+        let received = [{
+                fullName: "Jason James",
+                tech: "JS"
+            },
+            {
+                fullName: "Aaron William",
+                tech: "JS"
+            },
+            {
+                fullName: "Shira",
+                tech: ".Net"
+            },
+            {
+                fullName: "Isabella",
+                tech: "Java"
+            }
+        ]
 
-//         let received2 = [{
-//                 fullName: "Adele Douglas",
-//                 tech: ".Net"
-//             },
-//             {
-//                 fullName: "Jack Tyler",
-//                 tech: "Java"
-//             },
-//             {
-//                 fullName: "Jose Adam",
-//                 tech: ".Net"
-//             },
-//             {
-//                 fullName: "Victoria Zachary",
-//                 tech: "Python"
-//             }
-//         ]
-//         expect(cvFormatter(first_Cv_Sample)).toStrictEqual(received);
-//         expect(cvFormatter(second_Cv_Sample)).toStrictEqual(received2);
+        let received2 = [{
+                fullName: "Adele Douglas",
+                tech: ".Net"
+            },
+            {
+                fullName: "Jack Tyler",
+                tech: "Java"
+            },
+            {
+                fullName: "Jose Adam",
+                tech: ".Net"
+            },
+            {
+                fullName: "Victoria Zachary",
+                tech: "Python"
+            }
+        ]
+        expect(cvFormatter(first_Cv_Sample)).toStrictEqual(received);
+        expect(cvFormatter(second_Cv_Sample)).toStrictEqual(received2);
 
-//     })
+    })
 
-// })
+})
 
 // describe('Challenge07', () => {
 
