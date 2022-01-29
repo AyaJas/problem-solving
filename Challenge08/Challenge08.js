@@ -60,12 +60,12 @@ const customerAndAge = (obj) => {
 
 const getEntries = (obj) => {
   // write your code here
-  var res =[];
-  let folks = obj.map( (person,i) => {
-    return person;})
-// Object.entries(obj).forEach(entry => {
-//   return entry;})
-  //return res;
+  var res = [];
+  for (let property in obj) {
+    res.push(`${property}: ${obj[property]}`);
+  };
+  return res;
+
 };
 
 // -------------------------------------------------------------------------------------------------------
@@ -136,7 +136,7 @@ const getStudents = (arr) => {
 };
 
 module.exports = {
-  customerAndAge//,  getEntries//, courses//,
+  customerAndAge,  getEntries//, courses//,
 //   getInfo,
 //   getStudents,
 };
