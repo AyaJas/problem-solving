@@ -90,7 +90,14 @@ const objLat = (obj) => {
 
 // ------------------------
 const cvFormatter = (arr) => {
-    // write your code here
+    for( let property in arr ) {
+        if((arr[property].firstName == null || arr[property].lastName == null) && arr[property].yearsOfExperience > 1)
+    
+        console.log( arr[property].firstName + arr[property].lastName+ arr[property].tech);
+        }
+
+
+         
 };
 
 // // 3) ---------------------
@@ -116,6 +123,9 @@ const cvFormatter = (arr) => {
 // const applicationsStatics = (arr) => {
 //     // write your code here
 // };
+
+
+
 
 // // 4) ---------------------
 // //
@@ -242,4 +252,4 @@ const cvFormatter = (arr) => {
 //     // write your code here
 // };
 
-module.exports = { objLat /*,cvFormatter, applicationsStatics, classesAvg*/ };
+module.exports = { objLat ,cvFormatter/*, applicationsStatics, classesAvg*/ };
