@@ -27,13 +27,11 @@
 // -------------------------------------------------------------------------------------------------------
 
 const customerAndAge = (obj) => {
-  // write your code here
-let list =[];
-  var keys = Object.keys(obj);
-  var values = Object.values(obj);
+  // write your code here  
+
   const entries = Object.entries(obj);
   let sol = `Customer Name :${entries[0][0]} , Age :${entries[0][1]}`;
-  return sol
+  return sol;
 
 };
 
@@ -62,6 +60,12 @@ let list =[];
 
 const getEntries = (obj) => {
   // write your code here
+  var res =[];
+  let folks = obj.map( (person,i) => {
+    return person;})
+// Object.entries(obj).forEach(entry => {
+//   return entry;})
+  //return res;
 };
 
 // -------------------------------------------------------------------------------------------------------
@@ -72,40 +76,41 @@ const getEntries = (obj) => {
 // second one is containing the names of all the students
 // -------------------------------------------------------------------------------------------------------
 
-const courses = [
-  {
-    course: 'Java',
-    Instructor: 'David',
-    Students: ['Lincoln', 'Ruth', 'Briana', 'Suzy', 'Greta'],
-    GroupName: 'Stars',
-  },
-  {
-    course: 'JavaScript',
-    Instructor: 'Van',
-    Students: ['Alphonso', 'Daley', 'Dax', 'Karter', 'Jorja'],
-    GroupName: 'Nerd-ware',
-  },
-  {
-    course: 'Python',
-    Instructor: 'Delaney',
-    Students: ['Barney', 'Kalé', 'Alisha'],
-    GroupName: 'Whats-Up',
-  },
-  {
-    course: 'DotNet',
-    Instructor: 'Keanna',
-    Students: ['Oli', 'Gisselle', 'Pru'],
-    GroupName: 'Lol',
-  },
-];
+// const courses = [
+//   {
+//     course: 'Java',
+//     Instructor: 'David',
+//     Students: ['Lincoln', 'Ruth', 'Briana', 'Suzy', 'Greta'],
+//     GroupName: 'Stars',
+//   },
+//   {
+//     course: 'JavaScript',
+//     Instructor: 'Van',
+//     Students: ['Alphonso', 'Daley', 'Dax', 'Karter', 'Jorja'],
+//     GroupName: 'Nerd-ware',
+//   },
+//   {
+//     course: 'Python',
+//     Instructor: 'Delaney',
+//     Students: ['Barney', 'Kalé', 'Alisha'],
+//     GroupName: 'Whats-Up',
+//   },
+//   {
+//     course: 'DotNet',
+//     Instructor: 'Keanna',
+//     Students: ['Oli', 'Gisselle', 'Pru'],
+//     GroupName: 'Lol',
+//   },
+// ];
 
-const getInfo = (arr) => {
-  let coursesName = [];
-  let studentsName = [];
-  // write your code here
-
-  return { coursesName, studentsName };
-};
+// const getInfo = (arr) => {
+//   let coursesName = [];
+//   let studentsName = [];
+//   // write your code here
+//     let coursesName = arr.map( (person,i) => {return person.course;})
+//     let studentsName = arr.map( (person,i) => {return person.Students;})
+//   return { coursesName, studentsName };
+// };
 
 //  ------------------------------------------------------------------------------------------------------
 // Challenge 04
@@ -131,9 +136,7 @@ const getStudents = (arr) => {
 };
 
 module.exports = {
-  customerAndAge//,
-//   getEntries,
-//   courses,
+  customerAndAge//,  getEntries//, courses//,
 //   getInfo,
 //   getStudents,
 };

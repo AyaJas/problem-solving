@@ -1,7 +1,5 @@
 const {
-    customerAndAge//,
-    // getEntries,
-    // courses,
+    customerAndAge//,getEntries//,courses//,
     // getInfo,
     // getStudents,
 } = require("./Challenge08");
