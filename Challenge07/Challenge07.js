@@ -90,14 +90,43 @@ const objLat = (obj) => {
 
 // ------------------------
 const cvFormatter = (arr) => {
+    // write your code here
+
+    let reformattedArray = arr.map(obj => {
+        let rObj = {}
+        if(obj.firstName == null && obj.yearsOfExperience > 1)
+        {
+          rObj["fullName"] = obj.lastName;
+          rObj["tech"] = obj.tech;
+          }
+          else if(obj.lastName == null && obj.yearsOfExperience > 1)
+        {
+          rObj["fullName"] = obj.firstName;
+          rObj["tech"] = obj.tech;
+          }
+           else if(obj.firstName!=null && obj.lastName != null && obj.yearsOfExperience > 1)
+        {
+          rObj["fullName"] = obj.firstName +" "+ obj.lastName;
+          rObj["tech"] = obj.tech;
+          }
+        return rObj
+     });
+     //return reformattedArray;
+     const results = reformattedArray.filter(element => {
+        if (Object.keys(element).length !== 0) {
+          return true;
+        }
+      
+        return false;
+      });
+      return results;
+  
     for( let property in arr ) {
         if((arr[property].firstName == null || arr[property].lastName == null) && arr[property].yearsOfExperience > 1)
     
         console.log( arr[property].firstName + arr[property].lastName+ arr[property].tech);
         }
 
-
-         
 };
 
 // // 3) ---------------------
@@ -120,9 +149,47 @@ const cvFormatter = (arr) => {
 // //  1- rejectedApplicants are applications that has both the names empty or null and whoever have less than one year of Experience
 
 // // ------------------------
-// const applicationsStatics = (arr) => {
-//     // write your code here
-// };
+const applicationsStatics = (arr) => {
+    // write your code here
+    let countPy = 0; let countJs = 0; let countDotNet = 0; let countJava = 0; let totalApp = 0; let rejectApp = 0;
+    let reformattedArray = arr.map(obj => {
+
+        let rObj = {};
+
+        rObj["Python_Devs"] = countPy; rObj["javaScript_Devs"] = countJs; rObj["dotNet_Devs"] = countDotNet; rObj["java_Devs"] = countJava; rObj["totalApplicants"] = countPy + countJs + countDotNet + countJava; rObj["rejectedApplicants"] = rejectApp;
+
+
+        if (obj.yearsOfExperience > 1 && obj.tech == "Python") {
+            rObj["Python_Devs"] = countPy++;
+        }
+        else if (obj.yearsOfExperience > 1 && obj.tech == "JS") {
+            rObj["javaScript_Devs"] = countJs++;
+        }
+        else if (obj.yearsOfExperience > 1 && obj.tech == "Java") {
+            rObj["java_Devs"] = countJava++;
+        }
+        else if (obj.yearsOfExperience > 1 && obj.tech == ".Net") {
+            rObj["dotNet_Devs"] = countDotNet++;
+        }
+        else if (obj.yearsOfExperience > 0) {
+            rObj["totalApplicants"] = countPy + countJs + countDotNet + countJava;
+        }
+        else if (obj.yearsOfExperience <= 1) {
+            rObj["rejectedApplicants"] = rejectApp++;
+        }
+        return rObj
+    });
+    // console.log(rObj);
+
+
+    //console.log(reformattedArray);
+
+    const allCV = Object.assign({}, ...reformattedArray);
+
+    // Print fruits
+    return allCV;
+
+};
 
 
 
