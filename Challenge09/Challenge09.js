@@ -115,13 +115,18 @@ const employeesBonus = (arr) => {
     {
         if (arr[i].workHours > 8)
         {
-           return(arr[i].salary += 100);
+           var n1 = (parseInt(arr[i].salary));
+           n1 +=100;
+           arr[i].salary= n1+"$";
         }
-        else if (arr[i].workHours < 8)
+        else if (arr[i].workHours <= 8)
         {
-           return(arr[i].salary += 50);
+            var n2 = (parseInt(arr[i].salary));
+           n2 +=50;
+            arr[i].salary= n2+"$";
         }
     }
+     return arr;
 }
 
 // 4) ---------------------
